@@ -1,9 +1,18 @@
-import { useState } from "react";
 import { NAV_MENU } from "../constants/nav";
 
-export default function MainNavigation() {
-  const [toggleMenu, setToggleMenu] = useState(false);
+type MainNavigationProps = {
+  isOpen: boolean;
+  initial: boolean;
+  toggleMenu: () => void;
+  closeMenu: () => void;
+};
 
+export default function MainNavigation({
+  isOpen,
+  initial,
+  toggleMenu,
+  closeMenu,
+}: MainNavigationProps) {
   return (
     <nav className="pt-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,18 +42,18 @@ export default function MainNavigation() {
 
           <div
             className="flex items-center md:hidden px-[15px]"
-            onClick={() => setToggleMenu((prevstate) => !prevstate)}
+            onClick={toggleMenu}
           >
             <div className="w-[20px] h-[13px] flex flex-col justify-between cursor-pointer relative z-[999] ">
               <div
                 className={`w-6 h-[2px] bg-black ease-linear duration-300 ${
-                  toggleMenu &&
+                  isOpen &&
                   `transform rotate-45 translate-x-[-1px] translate-y-[4px] ease-linear duration-300 `
                 }`}
               ></div>
               <div
                 className={`w-6 h-[2px] bg-black ease-linear duration-300 ${
-                  toggleMenu &&
+                  isOpen &&
                   `transform -rotate-45 translate-x-[-1px] -translate-y-[6px] ease-linear duration-300 `
                 }`}
               ></div>
@@ -54,30 +63,31 @@ export default function MainNavigation() {
       </div>
       <div
         id="mobile-menu"
-        className={` ${toggleMenu ? "block" : "hidden"}
+        className={`${isOpen && "block"}  ${initial && "hidden"}
            relative z-[1]`}
-        // className="md:hidden block"
       >
-        <div className="fixed top-0 bottom-0 right-0 z-[10] w-full">
+        <div className={`fixed top-0 bottom-0 right-0 z-[10] w-full `}>
           <div
-            className={`bg-[#054738] w-[53%] h-screen absolute top-0 right-0 pt-16 pl-6`}
+            className={`bg-[#054738] w-[53%] h-screen absolute top-0 right-0 pt-16 pl-6 animate__animated flex flex-col
+            ${isOpen && "animate__slideInRight"} 
+          ${!isOpen && "animate__slideOutRight"}
+            `}
           >
+            <p className="font-medium mt-16 mb-6 text-white">Menu</p>
             {NAV_MENU.map((menu) => {
               return (
                 <a
-                  // onClick={closeMobileMenu}
-                  className="font-medium border-[2px] border-white border-solid p-[5px] rounded"
+                  onClick={closeMenu}
+                  className="font-medium text-white my-2 text-2xl"
                 >
                   {menu}
                 </a>
               );
             })}
-            <a
-              // onClick={closeMobileMenu}
-              className="font-medium border-[2px] border-white border-solid p-[5px] rounded"
-            >
-              Cart
-            </a>
+            <div className="flex flex-col gap-4 mt-6">
+              <p className="font-medium text-white">123-456-7891</p>
+              <p className="font-medium text-white">moveG@gmail.com</p>
+            </div>
           </div>
         </div>
       </div>
