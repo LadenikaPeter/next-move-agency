@@ -14,7 +14,7 @@ export default function MainNavigation({
   closeMenu,
 }: MainNavigationProps) {
   return (
-    <nav className="pt-5">
+    <nav className="pt-5 w-full z-[999] fixed">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center flex-grow">
@@ -31,7 +31,8 @@ export default function MainNavigation({
                   {NAV_MENU.map((menu) => {
                     return (
                       <div className="flex flex-col items-center gap-[5px] cursor-pointer hover:border-b-black border-b-[2px] border-transparent mb-0">
-                        <a className="font-medium text-lg">{menu}</a>
+                        <a className="font-medium text-lg text-white">{menu}</a>
+                        
                       </div>
                     );
                   })}

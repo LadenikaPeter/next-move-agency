@@ -1,0 +1,1 @@
+export const HEROIMAGE: string = 'https://res.cloudinary.com/da6w53p43/image/upload/v1691565668/64550a65d9b591439c1edf3a_realtor-img9_yn6y1k.jpg'
