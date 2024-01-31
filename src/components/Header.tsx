@@ -30,7 +30,7 @@ export default function MainNavigation({
                 <div className="flex gap-8">
                   {NAV_MENU.map((menu) => {
                     return (
-                      <div className="flex flex-col items-center gap-[5px] cursor-pointer hover:border-b-black border-b-[2px] border-transparent mb-0">
+                      <div className="flex flex-col items-center gap-[5px] cursor-pointer hover:border-b-white border-b-[2px] border-transparent mb-0">
                         <a className="font-medium text-lg text-white">{menu}</a>
                         
                       </div>
