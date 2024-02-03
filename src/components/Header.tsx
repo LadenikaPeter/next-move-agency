@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { NAV_MENU } from "../constants/nav";
 
 type MainNavigationProps = {
@@ -13,8 +14,27 @@ export default function MainNavigation({
   toggleMenu,
   closeMenu,
 }: MainNavigationProps) {
+  const [scrollBackground, setScrollBackground] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrollBackground(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="pt-5 w-full z-[999] fixed">
+    <nav
+      className={`pt-5 w-full z-[999] fixed transition-all duration-300 ${
+        scrollBackground ? "bg-white" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center flex-grow">
@@ -31,8 +51,13 @@ export default function MainNavigation({
                   {NAV_MENU.map((menu) => {
                     return (
                       <div className="flex flex-col items-center gap-[5px] cursor-pointer hover:border-b-white border-b-[2px] border-transparent mb-0">
-                        <a className="font-medium text-lg text-white">{menu}</a>
-                        
+                        <a
+                          className={`font-medium text-lg ${
+                            scrollBackground ? "text-[#054738]" : "text-white"
+                          } `}
+                        >
+                          {menu}
+                        </a>
                       </div>
                     );
                   })}

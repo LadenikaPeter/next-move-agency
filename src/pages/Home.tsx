@@ -32,9 +32,9 @@ export default function HomePage() {
               <div className="flex gap-3 items-center">
                 <p>About us</p>
                 <ArrowLink
-                  currentColor="#054738"
-                  activeColor="#ffffff"
-                  backgroundColor="#4b1b52"
+                  currentColor={"#054738"}
+                  activeColor={"#ffffff"}
+                  backgroundColor={"#054738"}
                 />
               </div>
             </div>
