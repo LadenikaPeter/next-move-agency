@@ -117,6 +117,35 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <section id="FIFTH__SECTION" className="py-[128px]">
+          <div className="flex h-[444px] gap-8">
+            <div className="w-1/2">
+              <img className="h-full object-cover" src="/home/home-1.jpg" />
+            </div>
+            <div className="w-1/2 flex flex-col justify-between">
+              <div className="h-[85%]">
+                <img
+                  className="h-full w-full object-cover"
+                  src="/home/home-2.jpg"
+                />
+              </div>
+              <div className="flex justify-between">
+                <p className="w-1/2 text-[#054738]">
+                  Providing extensive experience and deep understanding of
+                  luxury real estate.
+                </p>
+                <div className="flex items-center gap-4">
+                  <span className="text-[#054738]">View listings</span>
+                  <ArrowLink
+                    currentColor={"#054738"}
+                    activeColor={"#ffffff"}
+                    backgroundColor={"#054738"}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
