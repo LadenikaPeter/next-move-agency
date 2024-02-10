@@ -10,17 +10,25 @@ export const SECOND_SECTION: {
   { key: "i2", title: "20+", subTitle: "years of experience in Real estate" },
 ];
 
-export const THIRD_SECTION : {amount: string, text: string}[] = [
+export const THIRD_SECTION: { amount: string; text: string }[] = [
   {
-    amount: '6',
-    text: 'bedrooms'
+    amount: "6",
+    text: "bedrooms",
   },
   {
-    amount: '4',
-    text: 'bathrooms'
+    amount: "4",
+    text: "bathrooms",
   },
   {
-    amount: '4,955',
-    text: 'sq ft'
+    amount: "4,955",
+    text: "sq ft",
   },
-]
+];
+
+export const SIXTH_SECTION: { amount: string; text: string }[] = [
+  { amount: "375+", text: "happy clients" },
+  {
+    amount: "88",
+    text: "houses sold",
+  },
+];

@@ -1,5 +1,10 @@
 import ArrowLink from "../components/Arrow-link";
-import { SECOND_SECTION, THIRD_SECTION } from "../constants/home";
+import FindHome from "../components/Find-home";
+import {
+  SECOND_SECTION,
+  SIXTH_SECTION,
+  THIRD_SECTION,
+} from "../constants/home";
 
 export default function HomePage() {
   return (
@@ -146,7 +151,59 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <section id="SIXTH__SECTION" className="py-[128px]">
+          <div className="flex gap-20">
+            <div className="flex w-1/2 gap-12">
+              <div>
+                <p className="leading-[27px] text-[#054738]">
+                  We are passionate about helping our clients find their dream
+                  home and achieve their real estate goals. We believe that
+                  everyone deserves to experience the luxury and exclusivity
+                  that high-end residential properties can offer.
+                </p>
+              </div>
+              <div>
+                <p className="text-[#054738]">
+                  With over twenty years of experience selling luxury
+                  properties, we have developed a deep understanding of the
+                  luxury real estate market and the needs of high-end clientele.
+                </p>
+                <div className="flex gap-4 items-center mt-[25px]">
+                  <span className="text-[#054738]">About us</span>
+                  <ArrowLink
+                    currentColor={"#054738"}
+                    activeColor={"#ffffff"}
+                    backgroundColor={"#054738"}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex w-1/2">
+              <h1 className="text-[#054738] text-[88px] leading-[105.6px] -tracking-[2.4px]">
+                A Realtor that delivers.
+              </h1>
+            </div>
+          </div>
+          <div className="flex gap-20 pt-[64px]">
+            <div className="w-[44%] flex flex-col justify-end h-auto">
+              {SIXTH_SECTION.map((item) => {
+                return (
+                  <div className="flex justify-between py-3 border-b-[1px] border-b-[#054738]">
+                    <p className="text-[128px] leading-[140px] text-[#054738]">
+                      {item.amount}
+                    </p>
+                    <p className="flex items-end text-[#054738]">{item.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div>
+              <img src="/home/hero.png" />
+            </div>
+          </div>
+        </section>
       </div>
+      <FindHome />
     </>
   );
 }
