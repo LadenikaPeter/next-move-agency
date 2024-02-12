@@ -1,5 +1,6 @@
 import ArrowLink from "../components/Arrow-link";
 import FindHome from "../components/Find-home";
+import Footer from "../components/Footer";
 import {
   SECOND_SECTION,
   SIXTH_SECTION,
@@ -204,6 +205,7 @@ export default function HomePage() {
         </section>
       </div>
       <FindHome />
+      <Footer />
     </>
   );
 }
