@@ -1,10 +1,15 @@
+import { FOOTER_LINKS, SOCIALS } from "../constants/Footer";
 import SubmitButton from "./Submit-button";
 
 export default function Footer() {
+  function getYear() {
+    const dateObj = new Date();
+    return dateObj.getFullYear();
+  }
   return (
     <>
       <section id="FOOTER" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col pt-16 pb-8">
+        <div className="flex pt-16 pb-8 justify-between">
           <div>
             <div className="max-w-[320px]">
               <p className="text-[#054738]">
@@ -20,7 +25,21 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div></div>
+          <div className="max-w-[320px] w-full">
+            <ul className=" flex flex-col justify-between h-full">
+              {FOOTER_LINKS.map((item) => {
+                return <li className="text-right text-[#054738]">{item}</li>;
+              })}
+            </ul>
+          </div>
+        </div>
+        <div className="flex justify-between mb-8 text-[#054738]">
+          <p>© copyright {getYear()}</p>
+          <div className="flex gap-3">
+            {SOCIALS.map((item) => {
+              return <a href={item.link}>{item.social}</a>;
+            })}
+          </div>
         </div>
       </section>
     </>
