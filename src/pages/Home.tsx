@@ -30,9 +30,9 @@ export default function HomePage() {
       </section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <section id="SECOND__SECTION">
-          <div className="flex gap-20">
-            <div className="w-2/4 py-28">
-              <h1 className="text-[88px] -tracking-[2.4px] leading-[105px] text-[#054738]">
+          <div className="lg:flex block gap-20">
+            <div className="lg:w-2/4 py-28 ">
+              <h1 className="text-[clamp(66px,4vw,88px)] -tracking-[2.4px] leading-[105px] text-[#054738]">
                 For those that want a home that impresses.
               </h1>
               <div className="flex gap-3 items-center">
@@ -44,13 +44,13 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <div className="w-2/4 flex flex-col justify-end items-end gap-8">
-              <p className="w-2/4 text-[#054738]">
+            <div className="lg:w-2/4 w-full flex flex-col justify-end lg:items-end gap-8">
+              <p className="lg:w-2/4 text-[#054738]">
                 We specialize in selling high-end luxury residential properties
                 all across beautiful Los Angeles.
               </p>
 
-              <div className="flex w-full justify-between">
+              <div className="flex w-full lg:justify-between justify-end max-[1023px]:gap-5">
                 {SECOND_SECTION.map((item) => {
                   return (
                     <div key={item.key}>
