@@ -32,7 +32,7 @@ export default function HomePage() {
         <section id="SECOND__SECTION">
           <div className="lg:flex block gap-20">
             <div className="lg:w-2/4 py-28 ">
-              <h1 className="text-[clamp(66px,4vw,88px)] -tracking-[2.4px] leading-[105px] text-[#054738]">
+              <h1 className="text-[clamp(44px,6vw,88px)] -tracking-[2.4px] lg:leading-[105px] text-[#054738]">
                 For those that want a home that impresses.
               </h1>
               <div className="flex gap-3 items-center">
@@ -50,10 +50,16 @@ export default function HomePage() {
                 all across beautiful Los Angeles.
               </p>
 
-              <div className="flex w-full lg:justify-between justify-end max-[1023px]:gap-5">
+              <div className="flex w-full lg:justify-between justify-end max-[560px]:flex-wrap max-[1023px]:gap-5 ">
                 {SECOND_SECTION.map((item) => {
                   return (
-                    <div key={item.key}>
+                    <div
+                      key={item.key}
+                      className={` max-[1023px]:left-0  ${
+                        item.key === "i1" &&
+                        "max-[1160px]:relative -left-[22px]"
+                      }`}
+                    >
                       <h1 className="text-[128px] leading-[140px] text-[#054738]">
                         {item.title}
                       </h1>
@@ -67,7 +73,7 @@ export default function HomePage() {
         </section>
         <section id="THIRD__SECTION" className="py-[128px]">
           <div
-            className={`bg-[url('/home/home-bedroom.jpg')] h-screen bg-no-repeat bg-cover bg-[50%] relative`}
+            className={`bg-[url('/home/home-bedroom.jpg')] h-screen bg-no-repeat bg-cover bg-[50%] relative min-[992px]:block hidden`}
           >
             <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
             <div className="flex w-full h-full items-end justify-between px-8 pb-8 text-[#fffcf8] z-[99] relative">
@@ -91,22 +97,48 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          <div className="max-[991px]:block hidden">
+            <div className="h-[250px]">
+              <img
+                src="/home/home-bedroom.jpg"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="text-right mt-4">
+              <p className="text-[20px] -tracking-[1.6px] leading-[26px] text-[#054738]">
+                $4,499,000
+              </p>
+              <p className="text-[24px] -tracking-[0.8px] leading-[36px] text-[#054738]">
+                2934 Pasadena Court
+              </p>
+            </div>
+            <div className="mt-8">
+              {THIRD_SECTION.map((item) => {
+                return (
+                  <div className="flex text-[#054738] justify-between border-solid border-b-[1px] py-[9px] border-b-[#054738]">
+                    <p className="text-[20px]">{item.amount}</p>
+                    <p className="text-[16px]">{item.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </section>
         <section id="FOURTH__SECTION" className="py-[128px]">
-          <div className="flex gap-20">
-            <div className="w-[70%]">
+          <div className="flex gap-20 lg:flex-nowrap flex-wrap">
+            <div className="lg:w-[70%] w-full">
               <img
                 className="w-[48px] h-[48px]"
                 src="/quote-icon.svg"
                 alt="quoute-icon"
               />
-              <h1 className="text-[64px] leading-[73px] -tracking-[1.6px] text-[#054738] mt-5">
+              <h1 className="text-[clamp(32px,4vw,64px)] lg:leading-[73px] -tracking-[1.6px] text-[#054738] mt-5 leading-[55px] ">
                 Joe Louis made the process of buying my dream home easy and
                 stress-free. Their professionalism and attention to detail are
                 unparalleled.
               </h1>
             </div>
-            <div className="w-[30%] flex justify-end items-end  ">
+            <div className="lg:w-[30%] flex justify-end items-end w-full  ">
               <div className="h-[80px] flex gap-[30px] items-center">
                 <img
                   className="h-full rounded-[50%]"
@@ -124,11 +156,11 @@ export default function HomePage() {
           </div>
         </section>
         <section id="FIFTH__SECTION" className="py-[128px]">
-          <div className="flex h-[444px] gap-8">
-            <div className="w-1/2">
+          <div className="flex gap-8 md:flex-nowrap flex-wrap">
+            <div className="md:w-1/2">
               <img className="h-full object-cover" src="/home/home-1.jpg" />
             </div>
-            <div className="w-1/2 flex flex-col justify-between">
+            <div className="md:w-1/2 flex flex-col justify-between">
               <div className="h-[85%]">
                 <img
                   className="h-full w-full object-cover"
