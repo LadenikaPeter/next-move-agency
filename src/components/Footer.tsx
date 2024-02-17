@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <>
       <section id="FOOTER" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex pt-16 pb-8 justify-between">
+        <div className="flex pt-16 pb-8 justify-between flex-wrap gap-5">
           <div>
-            <div className="max-w-[320px]">
+            <div className="md:max-w-[320px]">
               <p className="text-[#054738]">
                 Stay up-to-date on my latest listings and market trends.
               </p>
@@ -25,15 +25,15 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="max-w-[320px] w-full">
-            <ul className=" flex flex-col justify-between h-full">
+          <div className="md:max-w-[320px] w-full">
+            <ul className=" flex flex-col justify-between h-full max-[767px]: gap-3">
               {FOOTER_LINKS.map((item) => {
                 return <li className="text-right text-[#054738]">{item}</li>;
               })}
             </ul>
           </div>
         </div>
-        <div className="flex justify-between mb-8 text-[#054738]">
+        <div className="flex sm:justify-between mb-8 text-[#054738] gap-3 flex-wrap justify-center">
           <p>© copyright {getYear()}</p>
           <div className="flex gap-3">
             {SOCIALS.map((item) => {

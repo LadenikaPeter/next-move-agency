@@ -12,7 +12,7 @@ export default function HomePage() {
     <>
       <section id="hero__Section">
         <div
-          className={`bg-[url('/home/hero-img.jpg')] h-screen bg-no-repeat bg-cover bg-[50%] px-16`}
+          className={`bg-[url('/home/hero-img.jpg')] h-screen bg-no-repeat bg-cover bg-[50%]`}
         >
           <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
           <div className="p-4 z-[99] relative justify-end flex flex-col h-full">
@@ -185,8 +185,8 @@ export default function HomePage() {
           </div>
         </section>
         <section id="SIXTH__SECTION" className="py-[128px]">
-          <div className="flex gap-20">
-            <div className="flex w-1/2 gap-12">
+          <div className="flex gap-20 lg:flex-nowrap flex-wrap">
+            <div className="flex lg:w-1/2 gap-12 lg:flex-nowrap flex-wrap">
               <div>
                 <p className="leading-[27px] text-[#054738]">
                   We are passionate about helping our clients find their dream
@@ -211,18 +211,18 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="flex w-1/2">
-              <h1 className="text-[#054738] text-[88px] leading-[105.6px] -tracking-[2.4px]">
+            <div className="flex lg:w-1/2">
+              <h1 className="text-[#054738] lg:text-[88px] lg:leading-[105.6px] lg:-tracking-[2.4px] text-[48px] leading-[57px] -tracking-[1.6px]">
                 A Realtor that delivers.
               </h1>
             </div>
           </div>
-          <div className="flex gap-20 pt-[64px]">
-            <div className="w-[44%] flex flex-col justify-end h-auto">
+          <div className="flex gap-20 pt-[64px] lg:flex-nowrap flex-wrap">
+            <div className="lg:w-[44%] w-full flex flex-col justify-end h-auto">
               {SIXTH_SECTION.map((item) => {
                 return (
                   <div className="flex justify-between py-3 border-b-[1px] border-b-[#054738]">
-                    <p className="text-[128px] leading-[140px] text-[#054738]">
+                    <p className="lg:text-[128px] text-[96px] leading-[140px] text-[#054738]">
                       {item.amount}
                     </p>
                     <p className="flex items-end text-[#054738]">{item.text}</p>
