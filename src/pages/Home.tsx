@@ -212,7 +212,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex lg:w-1/2">
-              <h1 className="text-[#054738] lg:text-[88px] lg:leading-[105.6px] lg:-tracking-[2.4px] text-[48px] leading-[57px] -tracking-[1.6px]">
+              <h1 className=" ">
                 A Realtor that delivers.
               </h1>
             </div>

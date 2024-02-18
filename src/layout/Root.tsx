@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import MainNavigation from "../components/Header";
 import { useState } from "react";
 
@@ -17,6 +17,9 @@ export default function RootLayout() {
     setIsOpen(false);
   };
 
+  const Location = useLocation()
+  console.log(Location.pathname)
+
   return (
     <>
       <MainNavigation
@@ -24,6 +27,7 @@ export default function RootLayout() {
         closeMenu={closeMobileMenu}
         isOpen={isOpen}
         initial={isIntialRender}
+        location={Location.pathname}
       />
       <main>
         <Outlet />

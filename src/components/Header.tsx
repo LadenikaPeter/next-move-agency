@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { NAV_MENU } from "../constants/nav";
+import { Link, NavLink } from "react-router-dom";
 
 type MainNavigationProps = {
   isOpen: boolean;
   initial: boolean;
+  location: string;
   toggleMenu: () => void;
   closeMenu: () => void;
 };
@@ -13,6 +15,7 @@ export default function MainNavigation({
   initial,
   toggleMenu,
   closeMenu,
+  location,
 }: MainNavigationProps) {
   const [scrollBackground, setScrollBackground] = useState(false);
 
@@ -32,32 +35,37 @@ export default function MainNavigation({
   return (
     <nav
       className={`pt-5 w-full z-[999] fixed transition-all duration-300 ${
-        scrollBackground ? "bg-white" : "bg-transparent"
+        scrollBackground ? "bg-[#fffcf8]" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center flex-grow">
-            <a className=" flex  xl:mr-52 mr-[5.5rem]">
+            <Link to={"/"} className=" flex  xl:mr-52 mr-[5.5rem]">
               <img
                 src="/home/brand-logo.png"
                 alt="Logo"
                 className="lg:w-[120px] w-[100px]"
               />
-            </a>
+            </Link>
             <div className="hidden flex-grow md:inline-block">
               <div className="flex justify-end">
                 <div className="flex gap-8">
                   {NAV_MENU.map((menu) => {
                     return (
                       <div className="flex flex-col items-center gap-[5px] cursor-pointer hover:border-b-white border-b-[2px] border-transparent mb-0">
-                        <a
+                        <NavLink
+                          to={"/" + menu.link}
                           className={`font-medium text-lg ${
-                            scrollBackground ? "text-[#054738]" : "text-white"
-                          } `}
+                            location !== "/"
+                              ? "text-[#054738]"
+                              : scrollBackground
+                              ? "text-[#054738]"
+                              : "text-white"
+                          }`}
                         >
-                          {menu}
-                        </a>
+                          {menu.title}
+                        </NavLink>
                       </div>
                     );
                   })}
@@ -106,7 +114,7 @@ export default function MainNavigation({
                   onClick={closeMenu}
                   className="font-medium text-white my-2 text-2xl"
                 >
-                  {menu}
+                  {menu.title}
                 </a>
               );
             })}
