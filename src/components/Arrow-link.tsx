@@ -14,8 +14,6 @@ export default function ArrowLink({
   const [color, setColor] = useState(currentColor);
   const [isHovered, setIsHovered] = useState(false);
 
-  console.log(currentColor);
-
   return (
     <>
       <div
