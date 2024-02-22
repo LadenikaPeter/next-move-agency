@@ -17,8 +17,23 @@ export default function RootLayout() {
     setIsOpen(false);
   };
 
-  const Location = useLocation()
-  console.log(Location.pathname)
+  const Location = useLocation();
+  console.log(Location.pathname);
+  const Nav: string[] = ["/", "listing"];
+
+  const checkNavigation = () => {
+    const path = location.pathname
+    const firstFragment = path.split('/')[1]
+    const secondFragment = path.split('/')[2]
+    
+    if(Nav.includes(path) || Nav.includes(firstFragment) || Nav.includes(secondFragment)){
+      return 'W'
+    } else {
+      return 'G'
+    }
+  };
+
+
 
   return (
     <>
@@ -28,6 +43,7 @@ export default function RootLayout() {
         isOpen={isOpen}
         initial={isIntialRender}
         location={Location.pathname}
+        navColor={checkNavigation}
       />
       <main>
         <Outlet />

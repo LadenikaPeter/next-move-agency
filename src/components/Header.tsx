@@ -8,6 +8,7 @@ type MainNavigationProps = {
   location: string;
   toggleMenu: () => void;
   closeMenu: () => void;
+  navColor: () => string | undefined;
 };
 
 export default function MainNavigation({
@@ -15,7 +16,7 @@ export default function MainNavigation({
   initial,
   toggleMenu,
   closeMenu,
-  location,
+  navColor,
 }: MainNavigationProps) {
   const [scrollBackground, setScrollBackground] = useState(false);
 
@@ -57,12 +58,13 @@ export default function MainNavigation({
                         <NavLink
                           to={"/" + menu.link}
                           className={`font-medium text-lg ${
-                            location !== "/"
-                              ? "text-[#054738]"
-                              : scrollBackground
-                              ? "text-[#054738]"
-                              : "text-white"
-                          }`}
+                            navColor() === "W"
+                              ? scrollBackground
+                                ? "text-[#054738]"
+                                : "text-white"
+                              : "text-[#054738]"
+                          }
+                          `}
                         >
                           {menu.title}
                         </NavLink>
