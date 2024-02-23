@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import FindHome from "../components/Find-home";
 import Footer from "../components/Footer";
 import { LISTINGS } from "../constants/Listings";
 
 export default function Listings() {
+  const navigate = useNavigate();
   return (
     <>
       <section className="pt-[192px]">
@@ -17,6 +19,7 @@ export default function Listings() {
             {LISTINGS.map((item) => {
               return (
                 <div
+                  onClick={() => navigate(`/listing/${item.location}`)}
                   className={`bg-[url('/listings/${item.image}.jpg')] h-[50vh] w-[49%] bg-no-repeat bg-cover bg-[50%] relative `}
                 >
                   <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>

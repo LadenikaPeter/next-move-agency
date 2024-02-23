@@ -61,7 +61,7 @@ export const LISTINGS: {
   {
     image: "home5",
     amount: "$20,499,000",
-    location: "2934 Pasadena Court",
+    location: "312 Edgewater",
     quality: [
       { amount1: "9", text: "bedrooms" },
       { amount1: "7", text: "bathrooms" },
