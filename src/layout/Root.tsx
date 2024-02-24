@@ -19,21 +19,23 @@ export default function RootLayout() {
 
   const Location = useLocation();
   console.log(Location.pathname);
-  const Nav: string[] = ["/", "listing"];
+  const Nav: string[] = ["/", "listing", "about"];
 
   const checkNavigation = () => {
-    const path = location.pathname
-    const firstFragment = path.split('/')[1]
-    const secondFragment = path.split('/')[2]
-    
-    if(Nav.includes(path) || Nav.includes(firstFragment) || Nav.includes(secondFragment)){
-      return 'W'
+    const path = location.pathname;
+    const firstFragment = path.split("/")[1];
+    const secondFragment = path.split("/")[2];
+
+    if (
+      Nav.includes(path) ||
+      Nav.includes(firstFragment) ||
+      Nav.includes(secondFragment)
+    ) {
+      return "W";
     } else {
-      return 'G'
+      return "G";
     }
   };
-
-
 
   return (
     <>

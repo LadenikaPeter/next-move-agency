@@ -15,7 +15,7 @@ export default function Listings() {
           <p className="text-[#054738]">
             Selling some of the nicest houses money can buy.
           </p>
-          <div className="min-[1263px]:flex flex-wrap gap-[24px] my-10 min-[1263px]:block hidden">
+          <div className="min-[1263px]:flex flex-wrap gap-[24px] my-10 hidden">
             {LISTINGS.map((item) => {
               return (
                 <div

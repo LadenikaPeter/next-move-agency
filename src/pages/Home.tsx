@@ -15,7 +15,7 @@ export default function HomePage() {
           className={`bg-[url('/home/hero-img.jpg')] h-screen bg-no-repeat bg-cover bg-[50%] `}
         >
           <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
-          <div className="p-4 z-[99] relative justify-end flex flex-col h-full">
+          <div className=" z-[99] relative justify-end flex flex-col h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-end items-center gap-4 pb-3">
               <p className="text-right text-white">Find your next home</p>
               <ArrowLink />
@@ -195,7 +195,7 @@ export default function HomePage() {
                   that high-end residential properties can offer.
                 </p>
               </div>
-              <div>
+              <div className="flex flex-col justify-between">
                 <p className="text-[#054738]">
                   With over twenty years of experience selling luxury
                   properties, we have developed a deep understanding of the

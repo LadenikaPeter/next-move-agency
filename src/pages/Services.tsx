@@ -88,7 +88,7 @@ export default function Services() {
                     that high-end residential properties can offer.
                   </p>
                 </div>
-                <div>
+                <div className="flex flex-col justify-between">
                   <p className="text-[#054738]">
                     With over twenty years of experience selling luxury
                     properties, we have developed a deep understanding of the
