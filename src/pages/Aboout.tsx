@@ -1,5 +1,7 @@
 import ArrowLink from "../components/Arrow-link";
-import { ABOUT_TRAITS } from "../constants/about";
+import FindHome from "../components/Find-home";
+import Footer from "../components/Footer";
+import { ABOUT_FACTS, ABOUT_TRAITS } from "../constants/about";
 
 export default function About() {
   return (
@@ -132,8 +134,56 @@ export default function About() {
                   backgroundColor={"#054738"}
                 />
               </div>
+              <div className="flex lg:flex-row flex-col  justify-end lg:gap-20 gap-10 lg:mt-0 mt-8">
+                {ABOUT_FACTS.map((item) => {
+                  return (
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-[128px] leading-[140px] text-[#054738]">
+                        {item.title}
+                      </h1>
+                      <p className="text-[#054738]">{item.subTitle}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
+          <div className="py-32">
+            <div className="flex gap-8 md:flex-nowrap flex-wrap">
+              <div className="md:w-1/2">
+                <img
+                  className="h-full object-cover"
+                  src="/listings/home3.jpg"
+                />
+              </div>
+              <div className="md:w-1/2 flex flex-col justify-between">
+                <div className="h-[85%]">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/listings/home6.jpg"
+                  />
+                </div>
+                <div className="flex justify-between">
+                  <p className="w-1/2 text-[#054738]">
+                    Providing extensive experience and deep understanding of
+                    luxury real estate.
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <span className="text-[#054738]">View listings</span>
+                    <ArrowLink
+                      currentColor={"#054738"}
+                      activeColor={"#ffffff"}
+                      backgroundColor={"#054738"}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <FindHome />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Footer />
         </div>
       </section>
     </>

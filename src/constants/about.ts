@@ -25,3 +25,13 @@ export const ABOUT_TRAITS: about_traits[] = [
       "We provide personalized attention and tailored services to ensure our clients have a stress-free and enjoyable real estate experience that meet their needs.",
   },
 ];
+
+export const ABOUT_FACTS: {
+  key: string;
+  title: string;
+  subTitle: string;
+}[] = [
+  { key: "i1", title: "$100", subTitle: "million houses sold last year" },
+  { key: "i2", title: "20+", subTitle: "years of experience in Real estate" },
+  { key: "i3", title: "32", subTitle: "sold in the last 18 months alone" },
+];
