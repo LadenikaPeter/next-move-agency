@@ -134,7 +134,7 @@ export default function About() {
                   backgroundColor={"#054738"}
                 />
               </div>
-              <div className="flex lg:flex-row flex-col  justify-end lg:gap-20 gap-10 lg:mt-0 mt-8">
+              <div className="flex lg:flex-row flex-col justify-end lg:gap-20 gap-10 lg:mt-0 mt-8">
                 {ABOUT_FACTS.map((item) => {
                   return (
                     <div className="flex flex-col gap-4">
