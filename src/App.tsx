@@ -8,6 +8,7 @@ import ListingDetails, {
 import Services from "./pages/Services";
 import About from "./pages/Aboout";
 import Contact from "./pages/Contact";
+import { useEffect } from "react";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;

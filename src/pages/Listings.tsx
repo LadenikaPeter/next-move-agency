@@ -19,8 +19,11 @@ export default function Listings() {
             {LISTINGS.map((item) => {
               return (
                 <div
+                  style={{
+                    backgroundImage: `url('/listings/${item.image}.jpg')`,
+                  }}
                   onClick={() => navigate(`/listing/${item.location}`)}
-                  className={`bg-[url('/listings/${item.image}.jpg')] h-[50vh] w-[49%] bg-no-repeat bg-cover bg-[50%] relative `}
+                  className={`h-[50vh] w-[49%] bg-no-repeat bg-cover bg-[50%] relative `}
                 >
                   <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
                   <div className="flex w-full h-full items-end justify-between px-8 pb-8 text-[#fffcf8] z-[99] relative">

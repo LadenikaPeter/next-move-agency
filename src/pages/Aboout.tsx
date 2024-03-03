@@ -48,6 +48,7 @@ export default function About() {
                     currentColor={"#054738"}
                     activeColor={"#ffffff"}
                     backgroundColor={"#054738"}
+                    route="/contact"
                   />
                 </div>
               </div>
@@ -66,21 +67,13 @@ export default function About() {
                     <h3 className="text-[clamp(32px,6vw,64px)] md:leading-[73.6px] md:-tracking-[1.6px]">
                       Why I do what I do
                     </h3>
-                    <p className="leading-[27px] mt-5">
+                    <p className="leading-[27px] mt-5 font-medium">
                       Here at Nextmove, we are passionate about helping our
                       clients find their dream home and achieve their real
                       estate goals. We believe that everyone deserves to
                       experience the luxury and exclusivity that high-end
                       residential properties can offer.
                     </p>
-                  </div>
-                  <div className="flex p-[6px] items-center gap-4">
-                    <p>view our listings</p>
-                    <ArrowLink
-                      currentColor={"#054738"}
-                      activeColor={"#ffffff"}
-                      backgroundColor={"#054738"}
-                    />
                   </div>
                 </div>
               </div>
@@ -132,6 +125,7 @@ export default function About() {
                   currentColor={"#054738"}
                   activeColor={"#ffffff"}
                   backgroundColor={"#054738"}
+                  route="/contact"
                 />
               </div>
               <div className="flex lg:flex-row flex-col justify-end lg:gap-20 gap-10 lg:mt-0 mt-8">
@@ -174,6 +168,7 @@ export default function About() {
                       currentColor={"#054738"}
                       activeColor={"#ffffff"}
                       backgroundColor={"#054738"}
+                      route="/listings"
                     />
                   </div>
                 </div>

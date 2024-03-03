@@ -9,7 +9,7 @@ export default function FindHome() {
         </h1>
         <div className="flex justify-center items-center gap-2">
           <p>Get in touch</p>
-          <ArrowLink />
+          <ArrowLink route="/contact" />
         </div>
       </div>
     </div>

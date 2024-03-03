@@ -1,19 +1,22 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type ArrowLinkProps = {
   currentColor?: string;
   activeColor?: string;
   backgroundColor?: string;
+  route: string;
 };
 
 export default function ArrowLink({
   currentColor = "#ffffff",
   activeColor = "#054738",
   backgroundColor = "#ffffff",
+  route,
 }: ArrowLinkProps) {
   const [color, setColor] = useState(currentColor);
   const [isHovered, setIsHovered] = useState(false);
-
+  const navigate = useNavigate()
   return (
     <>
       <div
@@ -29,6 +32,9 @@ export default function ArrowLink({
         onMouseLeave={() => {
           setColor(currentColor);
           setIsHovered(false);
+        }}
+        onClick={() => {
+          navigate(`${route}`)
         }}
       >
         <svg

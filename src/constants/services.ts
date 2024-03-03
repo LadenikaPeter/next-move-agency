@@ -11,20 +11,20 @@ export const SERVICES_PROVIDED: services_provided[] = [
     subtitle:
       "We provide personalized assistance throughout the entire buying process, from identifying suitable properties to negotiating offers and closing the deal.",
     linkText: "Find your next home",
-    link: "",
+    link: "/listings",
   },
   {
     title: "Selling",
     subtitle:
       "Implementing effective marketing strategies, showcasing the unique features of each property, and utilizing our network of high-end clientele to attract potential buyers and maximize the property's value.",
     linkText: "Sell your home",
-    link: "",
+    link: "/contact",
   },
   {
     title: "Consultation",
     subtitle:
       "Providing personalized assistance throughout the entire buying process, from identifying suitable properties to negotiating offers and closing the deal.",
     linkText: "Get a consult",
-    link: "",
+    link: "/contact",
   },
 ];

@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import MainNavigation from "../components/Header";
 import { useState } from "react";
+import GoToTop from "../components/ScrollToTop";
 
 export default function RootLayout() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,7 @@ export default function RootLayout() {
       <main>
         <Outlet />
       </main>
+      <GoToTop />
     </>
   );
 }

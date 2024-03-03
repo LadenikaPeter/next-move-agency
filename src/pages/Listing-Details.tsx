@@ -56,6 +56,7 @@ export default function ListingDetails() {
                   currentColor={"#054738"}
                   activeColor={"#ffffff"}
                   backgroundColor={"#054738"}
+                  route="/contact"
                 />
               </div>
               <div className="flex justify-end">

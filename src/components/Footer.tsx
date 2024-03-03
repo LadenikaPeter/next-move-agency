@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { FOOTER_LINKS, SOCIALS } from "../constants/Footer";
 import SubmitButton from "./Submit-button";
 
 export default function Footer() {
+  const navigate = useNavigate();
   function getYear() {
     const dateObj = new Date();
     return dateObj.getFullYear();
@@ -28,7 +30,16 @@ export default function Footer() {
           <div className="md:max-w-[320px] w-full">
             <ul className=" flex flex-col justify-between h-full max-[767px]: gap-3">
               {FOOTER_LINKS.map((item) => {
-                return <li className="text-right text-[#054738]">{item}</li>;
+                return (
+                  <li
+                    onClick={() => {
+                      navigate(`${item.link}`);
+                    }}
+                    className="sm:text-right text-[#054738]"
+                  >
+                    {item.title}
+                  </li>
+                );
               })}
             </ul>
           </div>
@@ -37,7 +48,11 @@ export default function Footer() {
           <p>© copyright {getYear()}</p>
           <div className="flex gap-3">
             {SOCIALS.map((item) => {
-              return <a href={item.link}>{item.social}</a>;
+              return (
+                <a href={item.link} target="_blank">
+                  {item.social}
+                </a>
+              );
             })}
           </div>
         </div>

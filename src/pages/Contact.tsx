@@ -25,7 +25,15 @@ export default function Contact() {
                   </p>
                   <div className="flex gap-4">
                     {SOCIAL_MEDIA.map((item) => {
-                      return <a href={item.link}>{item.app}</a>;
+                      return (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          className="cursor-pointer"
+                        >
+                          {item.app}
+                        </a>
+                      );
                     })}
                   </div>
                 </div>

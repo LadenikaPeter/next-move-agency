@@ -18,7 +18,7 @@ export default function HomePage() {
           <div className=" z-[99] relative justify-end flex flex-col h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-end items-center gap-4 pb-3">
               <p className="text-right text-white">Find your next home</p>
-              <ArrowLink />
+              <ArrowLink route="/contact" />
             </div>
 
             <h4 className="text-right text-white text-[32px] mb-5">
@@ -41,6 +41,7 @@ export default function HomePage() {
                   currentColor={"#054738"}
                   activeColor={"#ffffff"}
                   backgroundColor={"#054738"}
+                  route="/about"
                 />
               </div>
             </div>
@@ -178,6 +179,7 @@ export default function HomePage() {
                     currentColor={"#054738"}
                     activeColor={"#ffffff"}
                     backgroundColor={"#054738"}
+                    route="/listings"
                   />
                 </div>
               </div>
@@ -207,6 +209,7 @@ export default function HomePage() {
                     currentColor={"#054738"}
                     activeColor={"#ffffff"}
                     backgroundColor={"#054738"}
+                    route="/services"
                   />
                 </div>
               </div>

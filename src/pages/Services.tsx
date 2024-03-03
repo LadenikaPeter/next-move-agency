@@ -33,6 +33,7 @@ export default function Services() {
                       currentColor={"#054738"}
                       activeColor={"#ffffff"}
                       backgroundColor={"#054738"}
+                      route={`${item.link}`}
                     />
                   </div>
                 </div>
@@ -63,6 +64,7 @@ export default function Services() {
                       currentColor={"#054738"}
                       activeColor={"#ffffff"}
                       backgroundColor={"#054738"}
+                      route="/listings"
                     />
                   </div>
                 </div>
@@ -101,6 +103,7 @@ export default function Services() {
                       currentColor={"#054738"}
                       activeColor={"#ffffff"}
                       backgroundColor={"#054738"}
+                      route="/about"
                     />
                   </div>
                 </div>
