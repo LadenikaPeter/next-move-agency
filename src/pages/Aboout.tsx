@@ -13,7 +13,7 @@ export default function About() {
           <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
           <div className="z-[99] relative justify-end flex flex-col h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="w-full flex justify-end">
-              <p className=" text-white mb-10 w-fit">
+              <p className=" text-white sm:mb-10 mb-5 w-fit">
                 For over 20 years we've been helping potential
                 <br />
                 buyers find the home of their dreams.

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NAV_MENU } from "../constants/nav";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 type MainNavigationProps = {
   isOpen: boolean;
@@ -19,6 +19,8 @@ export default function MainNavigation({
   navColor,
 }: MainNavigationProps) {
   const [scrollBackground, setScrollBackground] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,7 +115,10 @@ export default function MainNavigation({
             {NAV_MENU.map((menu) => {
               return (
                 <a
-                  onClick={closeMenu}
+                  onClick={() => {
+                    navigate(`/${menu.link}`);
+                    closeMenu();
+                  }}
                   className="font-medium text-white my-2 text-2xl"
                 >
                   {menu.title}
