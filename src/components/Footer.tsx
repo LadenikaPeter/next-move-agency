@@ -35,7 +35,7 @@ export default function Footer() {
                     onClick={() => {
                       navigate(`${item.link}`);
                     }}
-                    className="sm:text-right text-[#054738]"
+                    className="sm:text-right text-[#054738] cursor-pointer"
                   >
                     {item.title}
                   </li>
