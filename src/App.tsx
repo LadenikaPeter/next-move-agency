@@ -8,7 +8,6 @@ import ListingDetails, {
 import Services from "./pages/Services";
 import About from "./pages/Aboout";
 import Contact from "./pages/Contact";
-import { useEffect } from "react";
 
 const router = createBrowserRouter([
   {
