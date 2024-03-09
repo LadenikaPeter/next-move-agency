@@ -14,7 +14,7 @@ export default function HomePage() {
         <div
           className={`bg-[url('/home/hero-img.jpg')] h-screen bg-no-repeat bg-cover bg-[50%] `}
         >
-          <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
+          <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] h-screen z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
           <div className=" z-[99] relative justify-end flex flex-col h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-end items-center gap-4 pb-3">
               <p className="text-right text-white">Find your next home</p>
@@ -159,7 +159,12 @@ export default function HomePage() {
         <section id="FIFTH__SECTION" className="py-[128px]">
           <div className="flex gap-8 md:flex-nowrap flex-wrap">
             <div className="md:w-1/2">
-              <img className="h-full object-cover" src="/home/home-1.jpg" />
+              <div>
+                <img
+                  className="h-full w-full object-cover"
+                  src="/home/home-1.jpg"
+                />
+              </div>
             </div>
             <div className="md:w-1/2 flex flex-col justify-between">
               <div className="h-[85%]">

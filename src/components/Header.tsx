@@ -104,7 +104,11 @@ export default function MainNavigation({
         className={`${isOpen && "block"}  ${initial && "hidden"}
            relative z-[1]`}
       >
-        <div className={`fixed top-0 bottom-0 right-0 z-[10] w-full `}>
+        <div
+          className={`fixed top-0 bottom-0 right-0 z-[10] w-full transform
+        ${isOpen ? "translate-x-0" : "translate-x-full"}
+        `}
+        >
           <div
             className={`bg-[#054738] w-[53%] h-screen absolute top-0 right-0 pt-16 pl-6 animate__animated flex flex-col
             ${isOpen && "animate__slideInRight"} 

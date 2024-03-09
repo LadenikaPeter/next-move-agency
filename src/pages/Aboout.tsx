@@ -10,7 +10,7 @@ export default function About() {
         <div
           className={`bg-[url('/listings/home3.jpg')] h-screen bg-no-repeat bg-cover bg-[50%] `}
         >
-          <div className="bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
+          <div className="h-screen bg-[linear-gradient(transparent,rgba(0,0,0,.55))] z-[1] absolute top-0 bottom-0 left-0 right-0"></div>
           <div className="z-[99] relative justify-end flex flex-col h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="w-full flex justify-end">
               <p className=" text-white sm:mb-10 mb-5 w-fit">
@@ -145,10 +145,12 @@ export default function About() {
           <div className="py-32">
             <div className="flex gap-8 md:flex-nowrap flex-wrap">
               <div className="md:w-1/2">
-                <img
-                  className="h-full object-cover"
-                  src="/listings/home3.jpg"
-                />
+                <div>
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/listings/home3.jpg"
+                  />
+                </div>
               </div>
               <div className="md:w-1/2 flex flex-col justify-between">
                 <div className="h-[85%]">
