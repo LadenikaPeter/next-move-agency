@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import MainNavigation from "../components/Header";
 import { useState } from "react";
 import GoToTop from "../components/ScrollToTop";
-import { ToastContainer } from "react-toastify";
+import { Bounce, ToastContainer } from "react-toastify";
 
 export default function RootLayout() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +53,19 @@ export default function RootLayout() {
         <Outlet />
       </main>
       <GoToTop />
-      <ToastContainer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Bounce}
+      />
     </>
   );
 }

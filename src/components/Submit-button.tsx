@@ -4,12 +4,14 @@ type SubmitButtonProps = {
   currentColor?: string;
   activeColor?: string;
   backgroundColor?: string;
+  handleSubmit: () => void;
 };
 
 export default function SubmitButton({
   currentColor = "#054738",
   activeColor = "#ffffff",
   backgroundColor = "#054738",
+  handleSubmit,
 }: SubmitButtonProps) {
   const [color, setColor] = useState(currentColor);
   const [isHovered, setIsHovered] = useState(false);
@@ -28,6 +30,9 @@ export default function SubmitButton({
         onMouseLeave={() => {
           setColor(currentColor);
           setIsHovered(false);
+        }}
+        onClick={() => {
+          handleSubmit();
         }}
         type="submit"
         className={`w-[96px] h-[96px] border border-solid rounded-full`}

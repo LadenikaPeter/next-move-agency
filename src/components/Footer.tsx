@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { FOOTER_LINKS, SOCIALS } from "../constants/Footer";
 import SubmitButton from "./Submit-button";
+import { useRef } from "react";
+import { isValidEmail } from "../util";
+import { error, success, warning } from "../servcies/notification.service";
+import { USER_ARRAY } from "../servcies/user";
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -8,6 +12,36 @@ export default function Footer() {
     const dateObj = new Date();
     return dateObj.getFullYear();
   }
+  const emailInput = useRef();
+
+  const handleEmailSubmit = () => {
+    if (
+      emailInput &&
+      emailInput.current &&
+      emailInput.current["value"] !== ""
+    ) {
+      const user_email = emailInput.current["value"];
+      const isValid = isValidEmail(user_email);
+
+      if (isValid) {
+        const user_exists = USER_ARRAY.includes(user_email);
+        user_exists
+          ? error({ message: "Email already exists" })
+          : successProcess(user_email);
+      } else {
+        error({ message: "Please input a valid email" });
+      }
+    } else {
+      warning({ message: "Please input a valid email" });
+    }
+    console.log(USER_ARRAY);
+  };
+
+  const successProcess = (email: string) => {
+    USER_ARRAY.push(email);
+    emailInput.current["value"] = "";
+    success({ message: "Email added successfully" });
+  };
   return (
     <>
       <section id="FOOTER" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,8 +56,9 @@ export default function Footer() {
                   type="email"
                   placeholder="Enter your email"
                   className="border-b-[#054738] border-b h-12 w-full text-[#054738] outline-none"
+                  ref={emailInput}
                 />
-                <SubmitButton />
+                <SubmitButton handleSubmit={handleEmailSubmit} />
               </div>
             </div>
           </div>
