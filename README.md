@@ -1,4 +1,4 @@
-# Next Move Agency - House Listing 
+# Next Move Agency - House Listing App
 
 Welcome to Next Move Agency, your go-to destination for modern house listings. Our cutting-edge app is crafted with React + Vite and styled with Tailwind CSS, ensuring a smooth and responsive browsing experience for users searching for their dream homes. Explore the possibilities and find your perfect home with Next Move Agency.
 
