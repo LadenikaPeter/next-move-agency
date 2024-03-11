@@ -5,16 +5,11 @@ Welcome to Next Move Agency, your go-to destination for modern house listings. O
 ## Features
 
 - Explore a diverse selection of available houses and properties.
-- Intuitive search functionality for efficient property discovery.
 - Detailed property listings with comprehensive information.
 - High-resolution images showcasing the interior and exterior of each property.
 - Responsive design to ensure a seamless user experience across different devices.
 - Save and organize favorite listings for easy access.
-- Real-time updates on new property listings and price changes.
-- Advanced filtering options to narrow down search results based on preferences.
-- Interactive maps for a visual representation of property locations.
-- Contact options to connect with real estate agents or property owners.
-- User account profiles to manage preferences, saved listings, and notifications.
+ - Contact options to connect with real estate agents or property owners.
 - Seamless integration of React + Vite for optimal performance and speed.
 - Stylish and user-friendly interface designed with Tailwind CSS.
 
