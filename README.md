@@ -30,15 +30,15 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/penito-furniture.git
-   cd penito-furniture
+   git clone https://github.com/your-username/next-move-agency.git
+   cd next-move-agency
 
-2. **Install Dependencies**
+3. **Install Dependencies**
 
    ```bash
    npm install
 
-3. Run the development server:
+4. Run the development server:
 
    ```bash
    npm run dev
