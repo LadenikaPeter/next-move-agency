@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+# Next Move Agency - House Listing 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Next Move Agency, your go-to destination for modern house listings. Our cutting-edge app is crafted with React + Vite and styled with Tailwind CSS, ensuring a smooth and responsive browsing experience for users searching for their dream homes. Explore the possibilities and find your perfect home with Next Move Agency.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Explore a diverse selection of available houses and properties.
+- Intuitive search functionality for efficient property discovery.
+- Detailed property listings with comprehensive information.
+- High-resolution images showcasing the interior and exterior of each property.
+- Responsive design to ensure a seamless user experience across different devices.
+- Save and organize favorite listings for easy access.
+- Real-time updates on new property listings and price changes.
+- Advanced filtering options to narrow down search results based on preferences.
+- Interactive maps for a visual representation of property locations.
+- Contact options to connect with real estate agents or property owners.
+- User account profiles to manage preferences, saved listings, and notifications.
+- Seamless integration of React + Vite for optimal performance and speed.
+- Stylish and user-friendly interface designed with Tailwind CSS.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React + Vite
+- Tailwind CSS
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To run this project locally, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/penito-furniture.git
+   cd penito-furniture
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+
+## Deployed site
+https://joelouishomes.netlify.app/
+
+## Contributing
+If you'd like to contribute to Penito Furniture, please follow the contributing guidelines.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
