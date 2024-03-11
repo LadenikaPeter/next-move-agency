@@ -53,7 +53,10 @@ export default function Listings() {
           <div className="max-[1262px]:block hidden my-10">
             {LISTINGS.map((item) => {
               return (
-                <div className="my-[60px]">
+                <div
+                  className="my-[60px]"
+                  onClick={() => navigate(`/listing/${item.location}`)}
+                >
                   <div className="h-[250px]">
                     <img
                       src={`/listings/${item.image}.jpg`}
