@@ -12,7 +12,7 @@ export default function Footer() {
     const dateObj = new Date();
     return dateObj.getFullYear();
   }
-  const emailInput = useRef();
+  const emailInput = useRef<HTMLInputElement>(null);
 
   const handleEmailSubmit = () => {
     if (
@@ -39,7 +39,9 @@ export default function Footer() {
 
   const successProcess = (email: string) => {
     USER_ARRAY.push(email);
-    emailInput.current["value"] = "";
+    if (emailInput && emailInput.current) {
+      emailInput.current.value = "";
+    }
     success({ message: "Email added successfully" });
   };
   return (
